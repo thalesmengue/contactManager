@@ -7,7 +7,7 @@
                     Contact Manager
                 </div>
                 <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
-                    <a href="#"
+                    <a href="{{ route("index.contact") }}"
                        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">Home</a>
                 </div>
             </div>
