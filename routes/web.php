@@ -25,5 +25,5 @@ Route::get("/edit/{id}", [ContactController::class, "edit"])->name("edit.contact
 Route::post("/edit/{id}", [ContactController::class, "update"])->name("update.contact");
 
 Route::get("/delete/{contact}", [ContactController::class, "softDelete"])->name("delete.contact");
-Route::delete("/delete/{contact}", [ContactController::class, "destroy"])->name("destroy.contact");
+Route::delete("/destroy/{contact}", [ContactController::class, "destroy"])->name("destroy.contact");
 
