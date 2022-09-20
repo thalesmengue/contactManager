@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactStoreRequest;
+use App\Http\Requests\ContactUpdateRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class ContactController extends Controller
         return view("edit_contact", compact("contact"));
     }
 
-    public function update(ContactStoreRequest $request, $id)
+    public function update(ContactUpdateRequest $request, $id)
     {
         $movie = Contact::query()->find($id);
         $movie->update($request->all());

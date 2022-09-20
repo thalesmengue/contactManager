@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ContactUpdateRequest extends FormRequest
@@ -21,12 +22,12 @@ class ContactUpdateRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(Request $request)
     {
         return [
             "name" => "required|min:5|max:100",
             "contact" => "required|min:9|max:9",
-            "email" => "required|email|min:3|max:80|unique:contacts,email"
+            "email" => "required|email|min:3|max:80|unique:contacts,email,$request->id"
         ];
     }
 
